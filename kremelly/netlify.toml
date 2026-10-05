@@ -1,0 +1,3 @@
+[build]
+  # Static site served from this folder (the site's base directory); no build step required.
+  publish = "."
