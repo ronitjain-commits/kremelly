@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Krémelly | Homemade Millet Brownies & Cakes</title>
+<meta name="description" content="Krémelly makes homemade eggless brownies with millets and brown sugar, plus cakes. Customised and bulk orders, gift-ready packaging. Bites you'll think about later!">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2b96; --ink:#121c63; --lime:#b5df2c; --tint:#f4fadc; --white:#fff;
+  --head:"Fraunces",Georgia,serif; --body:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--white);color:var(--ink);line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+.check{height:28px;background:conic-gradient(var(--navy) 25%,var(--white) 0 50%,var(--navy) 0 75%,var(--white) 0) 0 0/56px 56px}
+header{background:var(--white);border-bottom:3px solid var(--lime)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px;gap:14px}
+.logo img{display:block;height:84px;width:auto}
+nav{display:flex;gap:20px;font-weight:500}
+nav a{text-decoration:none;color:var(--navy)}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:3px;text-underline-offset:6px}
+.btn{display:inline-block;background:var(--navy);color:var(--white);padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--navy);transition:transform .15s,background .15s,color .15s}
+.btn:hover{background:var(--lime);border-color:var(--lime);color:var(--ink);transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--navy)}
+.btn.alt:hover{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.hero{padding:60px 0 56px;text-align:center;background:var(--tint)}
+.tag{display:inline-block;background:var(--lime);color:var(--ink);padding:6px 20px;border-radius:999px;font-weight:700;font-size:.95rem}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(2rem,5vw,3.1rem);line-height:1.15;margin:20px auto 14px;max-width:18em;color:var(--navy)}
+.lead{max-width:34em;margin:0 auto 28px;font-size:1.08rem}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+section{padding:66px 0}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.8rem,4.5vw,2.6rem);line-height:1.1;margin-bottom:12px;color:var(--navy)}
+.sub{max-width:36em;margin-bottom:32px}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.why div{background:var(--white);padding:24px;border-left:6px solid var(--lime);border-radius:6px;box-shadow:0 2px 10px rgba(26,43,150,.1)}
+.why h3{font-family:var(--head);font-size:1.2rem;margin-bottom:6px;color:var(--navy)}
+#why{background:var(--white)}
+.star{background:var(--navy);color:var(--white)}
+.star h2,.star .sub{color:var(--white)}
+.menus{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.card{background:var(--white);color:var(--ink);border:3px solid var(--navy);border-radius:18px;padding:30px}
+.star .card{border-color:var(--lime)}
+.card h3{font-family:var(--head);font-size:1.6rem;color:var(--navy)}
+.card small{display:block;font-weight:700;margin-bottom:12px;color:#4d6a00}
+.card ul{list-style:none;padding:0}
+.card li{padding:10px 0;border-bottom:1px dashed #b8c0e6;font-weight:700}
+.card li:last-child{border:0}
+.card li em{display:block;font-style:normal;font-weight:400;font-size:.9rem;opacity:.8}
+.notes{margin:16px 0 0;display:flex;gap:10px;flex-wrap:wrap}
+.notes span{background:var(--tint);padding:8px 16px;border-radius:999px;font-weight:700;font-size:.95rem;border:2px solid var(--lime)}
+.board{max-width:640px;margin:0 auto;text-align:center}
+.board h2{display:inline-block;background:var(--lime);color:var(--ink);padding:10px 44px;border-radius:999px;letter-spacing:2px;margin-bottom:16px}
+.board .note{margin:0 auto 22px;max-width:30em}
+.menu{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:22px}
+.menu li{background:var(--white);color:var(--navy);font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:16px 12px;border-radius:12px;border:3px solid var(--lime)}
+.menu li.wide{grid-column:1/-1}
+.board.light h2{background:var(--navy);color:var(--white)}
+.board.light .menu li{border-color:var(--navy);background:var(--white)}
+@media(max-width:480px){.menu{grid-template-columns:1fr}}
+#gallery{background:var(--white)}
+.gallery{columns:2 240px;column-gap:16px}
+.gallery figure{break-inside:avoid;margin:0 0 16px;border:3px solid var(--lime);border-radius:14px;overflow:hidden;background:var(--white)}
+.gallery img{display:block;width:100%;height:auto}
+.gallery figcaption{padding:10px 14px;font-weight:700;font-size:.95rem;color:var(--navy)}
+.cakes{background:var(--tint)}
+.contact{text-align:center;background:var(--white)}
+.contact p{max-width:32em;margin:0 auto 24px}
+.phone{display:block;font-family:var(--head);font-size:clamp(1.8rem,5vw,2.6rem);font-weight:800;color:var(--navy);margin-bottom:24px;text-decoration:none}
+footer{text-align:center;padding:26px 22px;font-size:.95rem;background:var(--navy);color:var(--white)}
+footer b{font-family:var(--head);color:var(--lime)}
+@media(max-width:620px){nav{display:none}.logo img{height:68px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="check" aria-hidden="true"></div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Krémelly home"><img src="images/logo.png" alt="Krémelly. Bites you'll think about later!" width="167" height="84"></a>
+    <nav aria-label="Main">
+      <a href="#why">Why Krémelly</a>
+      <a href="#brownies">Brownies</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#cakes">Cakes</a>
+    </nav>
+    <a class="btn" href="https://wa.me/919042801787?text=Hi%20Kr%C3%A9melly%2C%20I%27d%20like%20to%20know%20the%20prices." target="_blank" rel="noopener">Contact for prices</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <span class="tag">Eggless &middot; No preservatives</span>
+      <h1>Homemade brownies and cakes, made with love.</h1>
+      <p class="lead">Our speciality is brownies made with millets like ragi and kambu and sweetened with brown sugar. Baked at home, packed beautifully, and ready to gift.</p>
+      <div class="cta"><a class="btn alt" href="#brownies">See the menu</a></div>
+    </div>
+  </div>
+
+  <section id="why">
+    <div class="wrap">
+      <h2>Why people choose Krémelly</h2>
+      <p class="sub">Simple ingredients, careful hands, and a box you will be happy to hand over as a gift.</p>
+      <div class="why">
+        <div><h3>Healthier brownies</h3><p>Made with millets like ragi and kambu, sweetened with brown sugar.</p></div>
+        <div><h3>Homemade and hygienic</h3><p>Baked in a clean home kitchen with care.</p></div>
+        <div><h3>Made your way</h3><p>Customisation is available. Tell us the flavour, the occasion or the message.</p></div>
+        <div><h3>Bulk orders welcome</h3><p>Parties, offices, weddings and return gifts. We take bulk orders too.</p></div>
+        <div><h3>Pretty packaging</h3><p>Every order is packed to look good, so it is ready to gift.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="brownies" class="star">
+    <div class="wrap">
+      <div class="board">
+        <h2>BROWNIES</h2>
+        <p class="note">Made with brown sugar. Millet brownies are our speciality.</p>
+        <ul class="menu">
+          <li>Ragi Brownie</li>
+          <li>Kambu Brownie</li>
+          <li>Nutella Brownie</li>
+          <li>Lotus Biscoff Brownie</li>
+          <li>Chocochip Brownie</li>
+          <li>Almond Brownie</li>
+          <li class="wide">Assorted Brownie</li>
+        </ul>
+        <p class="note">Customisation and bulk orders available. Bookings 2 days before.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h2>Fresh from our kitchen</h2>
+      <p class="sub">A few of our celebration cakes. Every cake can be customised to your colours, flowers and message.</p>
+      <div class="gallery">
+        <figure><img src="images/cake-vanilla-flowers.jpg" alt="Chocolate cake with ridged cream frosting and baby's breath flowers" loading="lazy" width="900" height="1200"><figcaption>Chocolate cake</figcaption></figure>
+        <figure><img src="images/cake-butterscotch.jpg" alt="Two-tier butterscotch layered cake with pink ombre frosting, gold leaf and fresh roses" loading="lazy" width="952" height="849"><figcaption>Butterscotch layered cake</figcaption></figure>
+        <figure><img src="images/cake-pink-sprinkles.jpg" alt="Vanilla cake with pink frosting border and gold sprinkles" loading="lazy" width="900" height="1163"><figcaption>Vanilla cake</figcaption></figure>
+        <figure><img src="images/cake-chocolate.jpg" alt="Chocolate ganache cake with piped chocolate rosettes and gold pearls" loading="lazy" width="900" height="1138"><figcaption>Choco truffle cake</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="cakes" class="cakes">
+    <div class="wrap">
+      <div class="board light">
+        <h2>CAKES</h2>
+        <p class="note">Classic flavours for birthdays and celebrations.</p>
+        <ul class="menu">
+          <li>Choco Truffle</li>
+          <li>Strawberry</li>
+          <li>Vanilla</li>
+          <li>Pineapple</li>
+          <li>Black Forest</li>
+          <li>White Forest</li>
+          <li class="wide">Honey Jam</li>
+        </ul>
+        <p class="note">Bookings 2 days before.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Ready to order?</h2>
+      <p>Prices depend on flavour, size and customisation, so message us and we will quote you. Bookings are taken 2 days before.</p>
+      <a class="phone" href="tel:+919042801787">9042801787</a>
+    </div>
+  </section>
+</main>
+
+<footer><b>Krémelly.</b> &copy; <span id="y">2026</span> Krémelly. All rights reserved.</footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
